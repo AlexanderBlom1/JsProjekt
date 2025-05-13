@@ -9,6 +9,9 @@ let player2 = {
     score: 0
 }
 
+let players = [player1, player2];
+let currentPlayer = 0;
+
 // Slumpar ett tal mellan 1-6
 function RandomNumber() {
     return Math.floor(Math.random() * 6) + 1;
@@ -36,11 +39,20 @@ console.log("score" + player1.name);
 function addScore(plr, score, dice) {
     if (dice === 1) {
         plr.score = 0;
-        alert(plr.name + " fick 1 och förlorade alla poäng!");
+        currentPlayer = (currentPlayer + 1) % players.length;
     } else {
         plr.score += dice;
+        let score = document.getElementById("score" + plr.name);
+        console.log("score" + plr.name);
+        score.innerHTML = plr.name + ": " + plr.score;
+
     }
     document.getElementById("score" + plr).innerHTML = plr.name + ": " + plr.score;
 }
 
-rollDice();
+let rollButton = document.getElementById("roll");
+
+rollButton.addEventListener("click", function() {
+    rollDice();
+    addScore(players[currentPlayer], players[currentPlayer].score, parseInt(document.getElementById("dice").innerHTML));
+});
