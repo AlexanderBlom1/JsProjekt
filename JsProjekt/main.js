@@ -66,15 +66,21 @@ let totalScore1 = document.getElementById("totalScore" + player1.name);
 let totalScore2 = document.getElementById("totalScore" + player2.name);
 let holdButton = document.getElementById("hold");
 
+let total1 = 0
+let total2 = 0
+
 holdButton.addEventListener("click", function() {
     if (currentPlayer === 0) {
-        totalScore1.innerHTML = "Player1: " + player1.score;
+        total1 += player1.score;
+        totalScore1.innerHTML = "Player1: " + total1;
         player1.score = 0;
+
         let score = document.getElementById("score" + player1.name);
         score.innerHTML = player1.name + ": " + player1.score;
         currentPlayer = 1;
     } else {
-        totalScore2.innerHTML = "Player2: " + player2.score;
+        total2 += player2.score;
+        totalScore2.innerHTML = "Player2: " + total2;
         player2.score = 0;
         
         let score = document.getElementById("score" + player2.name);
