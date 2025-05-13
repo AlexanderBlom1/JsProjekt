@@ -43,4 +43,10 @@ function addScore(plr, score, dice) {
     document.getElementById("score" + plr).innerHTML = plr.name + ": " + plr.score;
 }
 
-rollDice();
+let rollButton = document.getElementById("roll");
+
+rollButton.addEventListener("click", function() {
+    rollDice();
+    addScore(player1, player1.score, dice);
+    addScore(player2, player2.score, dice);
+});
