@@ -3,7 +3,16 @@
     height: 100px;
 }
 
-.player2{
+.title{
     width: 90%;
     height: 90%;
+    font-size: 45px;
+}
+
+{
+background-color: antiquewhite;
+    width: 50%;
+    height: 500px;
+    text-align: center;
+
 }
