@@ -36,13 +36,18 @@ function rollDice() {
 
 console.log("score" + player1.name);
 
+
+
 function addScore(plr, score, dice) {
+
     if (dice === 1) {
+        let score = document.getElementById("score" + plr.name);
         plr.score = 0;
+        score.innerHTML = plr.name + ": " + plr.score;
         currentPlayer = (currentPlayer + 1) % players.length;
     } else {
-        plr.score += dice;
         let score = document.getElementById("score" + plr.name);
+        plr.score += dice;
         console.log("score" + plr.name);
         score.innerHTML = plr.name + ": " + plr.score;
 
