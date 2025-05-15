@@ -48,15 +48,23 @@ background-color: antiquewhite;
 }
 
 #roll{
-        position: absolute;
+    position: absolute;
     top: 60%;
     left: 60%;
     transform: translate(-60%, -60%);
+
 }
 
 #hold{
-        position: absolute;
+    position: absolute;
     top: 65%;
     left: 65%;
     transform: translate(-65%, -65%);
+}
+
+#reset{
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-70%, -70%);
 }
