@@ -26,6 +26,11 @@ let diceImgs = [
     "dice6.png"
 ]
 
+let reset = document.getElementById("reset");
+reset.addEventListener("click", function() {
+    resetGame();
+});
+
 function rollDice() {
     let dice1 = RandomNumber();
     let diceImg1 = document.getElementById("diceImg");
@@ -49,6 +54,8 @@ function resetGame() {
     totalScore2.innerHTML = total2;
     totalScore1.innerHTML = total1;
 }
+
+
 
 function checkWinner() {
     if (total1 >= 100) {
