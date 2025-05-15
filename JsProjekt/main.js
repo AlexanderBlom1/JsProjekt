@@ -36,7 +36,25 @@ function rollDice() {
 
 console.log("score" + player1.name);
 
+function resetGame() {
+    player1.score = 0;
+    player2.score = 0;
+    currentPlayer = 0;
+    let score1 = document.getElementById("score" + player1.name);
+    let score2 = document.getElementById("score" + player2.name);
+    score1.innerHTML = player1.name + ": " + player1.score;
+    score2.innerHTML = player2.name + ": " + player2.score;
+}
 
+function checkWinner() {
+    if (player1.score >= 100) {
+        alert(player1.name + " vinner!");
+        resetGame();
+    } else if (player2.score >= 100) {
+        alert(player2.name + " vinner!");
+        resetGame();
+    }
+}
 
 function addScore(plr, score, dice) {
 
@@ -70,13 +88,14 @@ let total1 = 0
 let total2 = 0
 
 holdButton.addEventListener("click", function() {
-    if (currentPlayer === 0) {
+    if (currentPlayer === 0  ) {
         total1 += player1.score;
         totalScore1.innerHTML = "Player1: " + total1;
         player1.score = 0;
 
         let score = document.getElementById("score" + player1.name);
         score.innerHTML = player1.name + ": " + player1.score;
+        checkWinner();
         currentPlayer = 1;
     } else {
         total2 += player2.score;
@@ -85,6 +104,7 @@ holdButton.addEventListener("click", function() {
         
         let score = document.getElementById("score" + player2.name);
         score.innerHTML = player2.name + ": " + player2.score;
+        checkWinner();
         currentPlayer = 0;
     }
 }
