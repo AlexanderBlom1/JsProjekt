@@ -39,18 +39,23 @@ console.log("score" + player1.name);
 function resetGame() {
     player1.score = 0;
     player2.score = 0;
+    total1 = 0;
+    total2 = 0;
     currentPlayer = 0;
     let score1 = document.getElementById("score" + player1.name);
     let score2 = document.getElementById("score" + player2.name);
     score1.innerHTML = player1.name + ": " + player1.score;
     score2.innerHTML = player2.name + ": " + player2.score;
+    totalScore2.innerHTML = "Player2: " + total2;
+    totalScore1.innerHTML = "Player2: " + total1;
 }
 
 function checkWinner() {
-    if (player1.score >= 100) {
+    if (total1 >= 100) {
+        console.log(player1.score);
         alert(player1.name + " vinner!");
         resetGame();
-    } else if (player2.score >= 100) {
+    } else if (total2 >= 100) {
         alert(player2.name + " vinner!");
         resetGame();
     }
@@ -59,18 +64,20 @@ function checkWinner() {
 function addScore(plr, score, dice) {
 
     if (dice === 1) {
+
         let score = document.getElementById("score" + plr.name);
         plr.score = 0;
         score.innerHTML = plr.name + ": " + plr.score;
         currentPlayer = (currentPlayer + 1) % players.length;
     } else {
+
         let score = document.getElementById("score" + plr.name);
         plr.score += dice;
         console.log("score" + plr.name);
         score.innerHTML = plr.name + ": " + plr.score;
 
     }
-    document.getElementById("score" + plr).innerHTML = plr.name + ": " + plr.score;
+    document.getElementById("score" + plr.name).innerHTML = plr.name + ": " + plr.score;
 }
 
 let rollButton = document.getElementById("roll");
@@ -93,19 +100,21 @@ holdButton.addEventListener("click", function() {
         totalScore1.innerHTML = "Player1: " + total1;
         player1.score = 0;
 
+
         let score = document.getElementById("score" + player1.name);
         score.innerHTML = player1.name + ": " + player1.score;
-        checkWinner();
         currentPlayer = 1;
+        checkWinner();
     } else {
+
         total2 += player2.score;
         totalScore2.innerHTML = "Player2: " + total2;
         player2.score = 0;
         
         let score = document.getElementById("score" + player2.name);
         score.innerHTML = player2.name + ": " + player2.score;
-        checkWinner();
         currentPlayer = 0;
+        checkWinner();
     }
 }
 )
