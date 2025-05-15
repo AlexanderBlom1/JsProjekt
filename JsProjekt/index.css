@@ -1,5 +1,4 @@
 #diceImg{
-
     width: 100px;
     height: 100px;
 }
@@ -14,12 +13,12 @@
 
 #scoreSpelare1{
     font-size: 25px;
-    margin-top: 200px;
+    margin-top: 250px;
 }
 
 #scoreSpelare2{
     font-size: 25px;
-    margin-top: 200px;
+    margin-top: 250px;
 }
 
 #player1div{
