@@ -51,6 +51,8 @@ function resetGame() {
     total1 = 0;
     total2 = 0;
     currentPlayer = 0;
+    totalSpelare1.style.backgroundColor = "rgb(223, 207, 187)";
+    totalSpelare2.style.backgroundColor = "rgb(178, 221, 234)";
     let score1 = document.getElementById("score" + player1.name);
     let score2 = document.getElementById("score" + player2.name);
     score1.innerHTML = "Current: " + player1.score;
