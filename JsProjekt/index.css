@@ -17,13 +17,28 @@
 }
 
 #scoreSpelare1{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
     font-size: 25px;
-    margin-top: 250px;
+    margin-top: 290px;
+    background-color: burlywood;
+    height: 125px;
+    width: 225px;
+    border-radius: 25px;
+
 }
 
 #scoreSpelare2{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
     font-size: 25px;
-    margin-top: 250px;
+    margin-top: 290px;
+    background-color: burlywood;
+    height: 125px;
+    width: 225px;
+    border-radius: 25px;
 }
 
 #player1div{
@@ -49,22 +64,27 @@ background-color: antiquewhite;
 
 #roll{
     position: absolute;
-    top: 60%;
-    left: 60%;
-    transform: translate(-60%, -60%);
+    border: none;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    height: 50px;
+    width: 150px;
+
 
 }
 
 #hold{
     position: absolute;
-    top: 65%;
-    left: 65%;
-    transform: translate(-65%, -65%);
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #reset{
     position: absolute;
-    top: 70%;
-    left: 70%;
-    transform: translate(-70%, -70%);
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
