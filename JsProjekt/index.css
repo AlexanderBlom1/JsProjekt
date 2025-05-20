@@ -68,7 +68,7 @@ background-color: antiquewhite;
 
 #roll{
     position: absolute;
-    top: 70%;
+    top: 72%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: none;
@@ -83,7 +83,7 @@ background-color: antiquewhite;
 
 #hold{
     position: absolute;
-    top: 80%;
+    top: 82%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: none;
@@ -123,4 +123,120 @@ background-color: antiquewhite;
     display: inline-block;
     height: 50px;
     width: 200px;
+}
+
+@media (max-width: 800px) {
+
+    #scoreSpelare1{
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        font-size: 25px;
+        margin-top: 200px;
+        background-color: burlywood;
+        height: 115px;
+        width: 180px;
+        border-radius: 25px;
+        padding-top: 15px;
+        box-sizing: border-box;
+
+    }
+
+    #scoreSpelare2{
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        font-size: 25px;
+        margin-top: 200px;
+        background-color: burlywood;
+        height: 115px;
+        width: 180px;
+        border-radius: 25px;
+        padding-top: 15px;
+        box-sizing: border-box;
+    }
+
+}
+
+@media (max-width: 700px) {
+   #scoreSpelare1{
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        font-size: 22px;
+        margin-top: 200px;
+        background-color: burlywood;
+        height: 50px;
+        width: 125px;
+        border-radius: 25px;
+        padding-bottom: 15px;
+    }
+
+    #scoreSpelare2{
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        font-size: 22px;
+        margin-top: 200px;
+        background-color: burlywood;
+        height: 50px;
+        width: 125px;
+        border-radius: 25px;
+        padding-bottom: 15px;
+    }
+}
+
+@media (max-width: 590px) {
+
+#header{
+    display: flex;
+    flex-direction: column-reverse;
+    
+}
+
+#player1div{
+    background-color: antiquewhite;
+    width: 100vh;
+    height: 50vh;
+    text-align: center;
+
+}
+
+#player2div{
+    background-color: lightblue;
+    width: 100vh;
+    height: 50vh;
+    text-align: center;
+}
+
+.title1{
+    font-size: 45px;
+
+}
+
+.title2{
+    font-size: 45px;
+    transform: scale(-1);    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
