@@ -64,7 +64,6 @@ background-color: antiquewhite;
 
 #roll{
     position: absolute;
-    border: none;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -87,4 +86,9 @@ background-color: antiquewhite;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+}
+
+#totalScoreSpelare1{
+    background-color: burlywood;
 }
