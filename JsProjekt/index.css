@@ -178,7 +178,7 @@ background-color: antiquewhite;
         justify-self: center;
         align-items: center;
         font-size: 22px;
-        margin-top: 200px;
+        margin-top: 187px;
         background-color: burlywood;
         height: 50px;
         width: 125px;
@@ -192,61 +192,45 @@ background-color: antiquewhite;
         justify-self: center;
         align-items: center;
         font-size: 22px;
-        margin-top: 200px;
+        margin-top: 187px;
         background-color: burlywood;
         height: 50px;
         width: 125px;
         border-radius: 25px;
         padding-bottom: 15px;
     }
-}
 
-@media (max-width: 590px) {
-
-#header{
-    display: flex;
-    flex-direction: column-reverse;
-    
-}
-
-#player1div{
-    background-color: antiquewhite;
-    width: 100vh;
-    height: 50vh;
-    text-align: center;
+    #totalScoreSpelare1{
+    font-size: 30px;
+    display: inline-block;
+    margin-top: 15px;
+    height: 50px;
+    width: 200px;
 
 }
 
-#player2div{
-    background-color: lightblue;
-    width: 100vh;
-    height: 50vh;
-    text-align: center;
+#totalScoreSpelare2{
+    font-size: 30px;
+    display: inline-block;
+    margin-top: 15px;
+    height: 50px;
+    width: 200px;
 }
 
-.title1{
-    font-size: 45px;
+#reset{
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background-color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
 
 }
-
-.title2{
-    font-size: 45px;
-    transform: scale(-1);    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
