@@ -52,7 +52,8 @@ background-color: antiquewhite;
     text-align: center;
 
 }
-
+/* hsl(34, 62%, 80% */
+/* rgb(137, 187, 204) */
 #player2div{
 
     background-color: lightblue;
@@ -111,9 +112,12 @@ background-color: antiquewhite;
 }
 
 #totalScoreSpelare1{
-    font-size: 25px;
+    font-size: 30px;
+    display: inline-block;
+
 }
 
 #totalScoreSpelare2{
-    font-size: 25px;
+    font-size: 30px;
+    display: inline-block;
 }
