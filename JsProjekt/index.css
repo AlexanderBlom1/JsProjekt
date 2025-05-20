@@ -58,11 +58,10 @@ background-color: antiquewhite;
     text-align: center;
 
 }
-/* hsl(34, 62%, 80% */
+/* hsl(34, 62%, 80%) */
 /* rgb(137, 187, 204) */
 /* Spelare 2 bakgrund */
 #player2div{
-
     background-color: lightblue;
     width: 50%;
     height: 600px;
