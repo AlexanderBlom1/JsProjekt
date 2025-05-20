@@ -1,3 +1,4 @@
+ /* Utseende för tärning */
 #diceImg{
     position: absolute;
     top: 50%;
@@ -8,14 +9,17 @@
 
 }
 
+/* Spelare 1 text */
 .title1{
     font-size: 45px;
 }
 
+/* Spelare 1 text */
 .title2{
     font-size: 45px;
 }
 
+/* Spelare 1 resultat */
 #scoreSpelare1{
     display: flex;
     justify-content: center;
@@ -31,6 +35,7 @@
 
 }
 
+/* Spelare 2 resultat */
 #scoreSpelare2{
     display: flex;
     justify-content: center;
@@ -45,6 +50,7 @@
     box-sizing: border-box;
 }
 
+/* Spelare 1 bakgrund */
 #player1div{
 background-color: antiquewhite;
     width: 50%;
@@ -54,6 +60,7 @@ background-color: antiquewhite;
 }
 /* hsl(34, 62%, 80%) */
 /* rgb(137, 187, 204) */
+/* Spelare 2 bakgrund */
 #player2div{
     background-color: lightblue;
     width: 50%;
@@ -61,11 +68,13 @@ background-color: antiquewhite;
     text-align: center;
 }
 
+/* Gör att båda spelar div är bredvid varandra */
 #header{
     display: flex;
     
 }
 
+/* Kasta tärning */
 #roll{
     position: absolute;
     top: 72%;
@@ -81,6 +90,7 @@ background-color: antiquewhite;
 
 }
 
+/* Hålla alla kast  */
 #hold{
     position: absolute;
     top: 82%;
@@ -95,6 +105,7 @@ background-color: antiquewhite;
     cursor: pointer;
 }
 
+/* Starta om resultatet */
 #reset{
     position: absolute;
     top: 20%;
@@ -110,6 +121,7 @@ background-color: antiquewhite;
 
 }
 
+/* Total hur många poäng från kast spelare 1 får */
 #totalScoreSpelare1{
     font-size: 30px;
     display: inline-block;
@@ -118,6 +130,7 @@ background-color: antiquewhite;
 
 }
 
+/* Total hur många poäng från kast spelare 2 får */
 #totalScoreSpelare2{
     font-size: 30px;
     display: inline-block;
