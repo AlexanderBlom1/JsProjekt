@@ -113,10 +113,14 @@ background-color: antiquewhite;
 #totalScoreSpelare1{
     font-size: 30px;
     display: inline-block;
+    height: 50px;
+    width: 200px;
 
 }
 
 #totalScoreSpelare2{
     font-size: 30px;
     display: inline-block;
+    height: 50px;
+    width: 200px;
 }
