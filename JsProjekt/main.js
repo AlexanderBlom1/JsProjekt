@@ -79,11 +79,11 @@ function addScore(plr, score, dice) {
         score.innerHTML = "Current: " + score;
         currentPlayer = (currentPlayer + 1) % players.length;
         if (currentPlayer === 0) {
-            totalSpelare1.style.backgroundColor = "green";
-            totalSpelare2.style.backgroundColor = "red";
-        } else {
-            totalSpelare2.style.backgroundColor = "green";
-            totalSpelare1.style.backgroundColor = "red";
+            totalSpelare1.style.backgroundColor = "rgb(223, 207, 187)";
+            totalSpelare2.style.backgroundColor = "rgb(178, 221, 234)";
+            } else {
+            totalSpelare1.style.backgroundColor = "rgb(253, 237, 217)";
+            totalSpelare2.style.backgroundColor = "rgb(148, 191, 204)";
         }
     } else {
 
@@ -115,8 +115,10 @@ let totalSpelare2 = document.getElementById("totalScore" + player2.name);
 
 holdButton.addEventListener("click", function() {
     if (currentPlayer === 0  ) {
-        totalSpelare1.style.backgroundColor = "red";
-        totalSpelare2.style.backgroundColor = "green";
+
+        totalSpelare1.style.backgroundColor = "rgb(253, 237, 217)";
+        totalSpelare2.style.backgroundColor = "rgb(148, 191, 204)";
+
         total1 += player1.score;
         totalScore1.innerHTML = "Total: " + total1;
         player1.score = 0;
@@ -127,8 +129,8 @@ holdButton.addEventListener("click", function() {
         currentPlayer = 1;
         checkWinner();
     } else {
-        totalSpelare2.style.backgroundColor = "red";
-        totalSpelare1.style.backgroundColor = "green";
+        totalSpelare1.style.backgroundColor = "rgb(223, 207, 187)";
+        totalSpelare2.style.backgroundColor = "rgb(178, 221, 234)";
         total2 += player2.score;
         totalScore2.innerHTML = "Total: " + total2;
         player2.score = 0;
