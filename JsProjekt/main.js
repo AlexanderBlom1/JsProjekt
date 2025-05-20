@@ -45,6 +45,7 @@ function rollDice() {
 console.log("score" + player1.name);
 
 function resetGame() {
+
     player1.score = 0;
     player2.score = 0;
     total1 = 0;
@@ -77,6 +78,13 @@ function addScore(plr, score, dice) {
         plr.score = 0;
         score.innerHTML = "Current: " + score;
         currentPlayer = (currentPlayer + 1) % players.length;
+        if (currentPlayer === 0) {
+            totalSpelare1.style.backgroundColor = "green";
+            totalSpelare2.style.backgroundColor = "red";
+        } else {
+            totalSpelare2.style.backgroundColor = "green";
+            totalSpelare1.style.backgroundColor = "red";
+        }
     } else {
 
         let score = document.getElementById("score" + plr.name);
@@ -102,8 +110,13 @@ let holdButton = document.getElementById("hold");
 let total1 = 0
 let total2 = 0
 
+let totalSpelare1 = document.getElementById("totalScore" + player1.name);
+let totalSpelare2 = document.getElementById("totalScore" + player2.name);
+
 holdButton.addEventListener("click", function() {
     if (currentPlayer === 0  ) {
+        totalSpelare1.style.backgroundColor = "red";
+        totalSpelare2.style.backgroundColor = "green";
         total1 += player1.score;
         totalScore1.innerHTML = "Total: " + total1;
         player1.score = 0;
@@ -114,7 +127,8 @@ holdButton.addEventListener("click", function() {
         currentPlayer = 1;
         checkWinner();
     } else {
-
+        totalSpelare2.style.backgroundColor = "red";
+        totalSpelare1.style.backgroundColor = "green";
         total2 += player2.score;
         totalScore2.innerHTML = "Total: " + total2;
         player2.score = 0;
