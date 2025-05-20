@@ -31,12 +31,14 @@ reset.addEventListener("click", function() {
     resetGame();
 });
 
+let dice1 = 0;
+
 function rollDice() {
-    let dice1 = RandomNumber();
+    dice1 = RandomNumber();
     let diceImg1 = document.getElementById("diceImg");
     let dice = document.getElementById("dice");
     diceImg1.src = diceImgs[dice1 - 1];
-    dice.innerHTML = dice1;
+    
 }
 
 console.log("score" + player1.name);
@@ -91,7 +93,7 @@ let rollButton = document.getElementById("roll");
 
 rollButton.addEventListener("click", function() {
     rollDice();
-    addScore(players[currentPlayer], players[currentPlayer].score, parseInt(document.getElementById("dice").innerHTML));
+    addScore(players[currentPlayer], players[currentPlayer].score, dice1);
 });
 
 let totalScore1 = document.getElementById("totalScore" + player1.name);
