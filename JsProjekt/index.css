@@ -21,11 +21,13 @@
     justify-content: center;
     justify-self: center;
     font-size: 25px;
-    margin-top: 290px;
+    margin-top: 200px;
     background-color: burlywood;
     height: 125px;
     width: 225px;
     border-radius: 25px;
+    padding-top: 15px;
+    box-sizing: border-box;
 
 }
 
@@ -34,11 +36,13 @@
     justify-content: center;
     justify-self: center;
     font-size: 25px;
-    margin-top: 290px;
+    margin-top: 200px;
     background-color: burlywood;
     height: 125px;
     width: 225px;
     border-radius: 25px;
+    padding-top: 15px;
+    box-sizing: border-box;
 }
 
 #player1div{
@@ -67,10 +71,13 @@ background-color: antiquewhite;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: none;
     background-color: white;
-    height: 50px;
+    height: 40px;
     width: 150px;
-
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
 
 }
 
@@ -79,6 +86,13 @@ background-color: antiquewhite;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: none;
+    background-color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 #reset{
@@ -86,9 +100,20 @@ background-color: antiquewhite;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: none;
+    background-color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
 
 }
 
 #totalScoreSpelare1{
-    background-color: burlywood;
+    font-size: 25px;
+}
+
+#totalScoreSpelare2{
+    font-size: 25px;
 }
