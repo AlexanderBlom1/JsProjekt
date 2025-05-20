@@ -1,5 +1,6 @@
 
 
+// Skapa en spelare med namn och poäng
 let player1 = {
     name: "Spelare1",
     score: 0
@@ -10,6 +11,7 @@ let player2 = {
     score: 0
 }
 
+// Skapa en array med spelarna
 let players = [player1, player2];
 let currentPlayer = 0;
 
@@ -18,6 +20,8 @@ function RandomNumber() {
     return Math.floor(Math.random() * 6) + 1;
 }
 
+// Skapar en array med bilder på tärningarna
+// Tärningarna är i ordningen 1-6
 let diceImgs = [
     "dice1.png",   
     "dice2.png",
@@ -27,6 +31,7 @@ let diceImgs = [
     "dice6.png"
 ]
 
+// reset knappen
 let reset = document.getElementById("reset");
 reset.addEventListener("click", function() {
     resetGame();
@@ -34,6 +39,7 @@ reset.addEventListener("click", function() {
 
 let dice1 = 0;
 
+// Slumpar ett tal mellan 1-6 och visar bilden på tärningen utifrån talet
 function rollDice() {
     dice1 = RandomNumber();
     let diceImg1 = document.getElementById("diceImg");
@@ -44,6 +50,7 @@ function rollDice() {
 
 console.log("score" + player1.name);
 
+// Skapar en funktion som resetar spelet
 function resetGame() {
 
     player1.score = 0;
@@ -61,6 +68,8 @@ function resetGame() {
     totalScore1.innerHTML = "Total: " + total1;
 }
 
+
+// kollar ifall någon av spelarna har mer än 100 poäng
 function checkWinner() {
     if (total1 >= 100) {
         console.log(player1.score);
@@ -72,6 +81,8 @@ function checkWinner() {
     }
 }
 
+
+// funktion för att lägga till poäng till den aktiva spelaren
 function addScore(plr, score, dice) {
 
     if (dice === 1) {
@@ -80,6 +91,7 @@ function addScore(plr, score, dice) {
         plr.score = 0;
         score.innerHTML = "Current: " + score;
         currentPlayer = (currentPlayer + 1) % players.length;
+        // byter färg på spelarens bakgrund vilket visar vilken spelare som är aktiv
         if (currentPlayer === 0) {
             totalSpelare1.style.backgroundColor = "rgb(223, 207, 187)";
             totalSpelare2.style.backgroundColor = "rgb(178, 221, 234)";
@@ -100,6 +112,7 @@ function addScore(plr, score, dice) {
 
 let rollButton = document.getElementById("roll");
 
+// knappen för att slå tärningen
 rollButton.addEventListener("click", function() {
     rollDice();
     addScore(players[currentPlayer], players[currentPlayer].score, dice1);
@@ -115,6 +128,7 @@ let total2 = 0
 let totalSpelare1 = document.getElementById("totalScore" + player1.name);
 let totalSpelare2 = document.getElementById("totalScore" + player2.name);
 
+// knappen för att hålla tärningen
 holdButton.addEventListener("click", function() {
     if (currentPlayer === 0  ) {
 
@@ -144,5 +158,5 @@ holdButton.addEventListener("click", function() {
     }
 }
 )
-
+// resetar spelet i början för att sätta spelarna till 0 för säkerhetskull
 resetGame();
