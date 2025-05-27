@@ -71,11 +71,11 @@ function resetGame() {
 
 // kollar ifall någon av spelarna har mer än 100 poäng
 function checkWinner() {
-    if (total1 >= 100) {
+    if (total1 >= 20) {
         console.log(player1.score);
         alert(player1.name + " vinner!");
         resetGame();
-    } else if (total2 >= 100) {
+    } else if (total2 >= 20) {
         alert(player2.name + " vinner!");
         resetGame();
     }
