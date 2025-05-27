@@ -1,3 +1,4 @@
+ /* Utseende för tärning */
 #diceImg{
     position: absolute;
     top: 50%;
@@ -8,14 +9,17 @@
 
 }
 
+/* Spelare 1 text */
 .title1{
     font-size: 45px;
 }
 
+/* Spelare 1 text */
 .title2{
     font-size: 45px;
 }
 
+/* Spelare 1 resultat */
 #scoreSpelare1{
     display: flex;
     justify-content: center;
@@ -31,6 +35,7 @@
 
 }
 
+/* Spelare 2 resultat */
 #scoreSpelare2{
     display: flex;
     justify-content: center;
@@ -45,6 +50,7 @@
     box-sizing: border-box;
 }
 
+/* Spelare 1 bakgrund */
 #player1div{
 background-color: antiquewhite;
     width: 50%;
@@ -52,24 +58,26 @@ background-color: antiquewhite;
     text-align: center;
 
 }
-/* hsl(34, 62%, 80% */
+/* hsl(34, 62%, 80%) */
 /* rgb(137, 187, 204) */
+/* Spelare 2 bakgrund */
 #player2div{
-
     background-color: lightblue;
     width: 50%;
     height: 600px;
     text-align: center;
 }
 
+/* Gör att båda spelar div är bredvid varandra */
 #header{
     display: flex;
     
 }
 
+/* Kasta tärning */
 #roll{
     position: absolute;
-    top: 70%;
+    top: 72%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: none;
@@ -82,9 +90,10 @@ background-color: antiquewhite;
 
 }
 
+/* Hålla alla kast  */
 #hold{
     position: absolute;
-    top: 80%;
+    top: 82%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: none;
@@ -96,6 +105,7 @@ background-color: antiquewhite;
     cursor: pointer;
 }
 
+/* Starta om resultatet */
 #reset{
     position: absolute;
     top: 20%;
@@ -111,6 +121,7 @@ background-color: antiquewhite;
 
 }
 
+/* Total hur många poäng från kast spelare 1 får */
 #totalScoreSpelare1{
     font-size: 30px;
     display: inline-block;
@@ -119,9 +130,110 @@ background-color: antiquewhite;
 
 }
 
+/* Total hur många poäng från kast spelare 2 får */
 #totalScoreSpelare2{
     font-size: 30px;
     display: inline-block;
     height: 50px;
     width: 200px;
+}
+
+@media (max-width: 800px) {
+
+    #scoreSpelare1{
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        font-size: 25px;
+        margin-top: 200px;
+        background-color: burlywood;
+        height: 115px;
+        width: 180px;
+        border-radius: 25px;
+        padding-top: 15px;
+        box-sizing: border-box;
+
+    }
+
+    #scoreSpelare2{
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        font-size: 25px;
+        margin-top: 200px;
+        background-color: burlywood;
+        height: 115px;
+        width: 180px;
+        border-radius: 25px;
+        padding-top: 15px;
+        box-sizing: border-box;
+    }
+
+}
+
+@media (max-width: 700px) {
+   #scoreSpelare1{
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        font-size: 22px;
+        margin-top: 187px;
+        background-color: burlywood;
+        height: 50px;
+        width: 125px;
+        border-radius: 25px;
+        padding-bottom: 15px;
+    }
+
+    #scoreSpelare2{
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        font-size: 22px;
+        margin-top: 187px;
+        background-color: burlywood;
+        height: 50px;
+        width: 125px;
+        border-radius: 25px;
+        padding-bottom: 15px;
+    }
+
+    #totalScoreSpelare1{
+    font-size: 30px;
+    display: inline-block;
+    margin-top: 15px;
+    height: 50px;
+    width: 200px;
+
+}
+
+#totalScoreSpelare2{
+    font-size: 30px;
+    display: inline-block;
+    margin-top: 15px;
+    height: 50px;
+    width: 200px;
+}
+
+#reset{
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background-color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+
+
+
+
 }
